@@ -82,6 +82,18 @@ fn main() {
     // functions with return values
     println!("simple_fun returns {}", simple_fun());
     println!("simple_fun_2 returns {}", simple_fun_2(9));
+
+    // if-else statements
+    let x = (3, 5);
+    let max_x;
+    if (x.0 > x.1) {
+        max_x = x.0;
+    } else {
+        max_x = x.1;
+    }
+    println!("The max of {:?} is {}.", x, max_x);
+    let min_x = if x.0 <= x.1 {x.0} else {x.1};
+    println!("The min of {:?} is {}.", x, min_x);
 }
 
 fn some_function(age: u32, name: &str) {
