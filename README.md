@@ -20,3 +20,10 @@ cargo check
 # Build for release
 cargo build —release
 ```
+
+## The Cargo.lock file
+Keeps track of all dependency (crate) versions and ensures reproducibility. This file is created the first time you run `cargo build`. 
+
+To update your crates you can call `cargo update`. Cargo will then update all crates while ensuring your specifications in `Cargo.toml` are met.
+
+Because `Cargo.lock` is important for reproducible builds, it is common to include it in VCS.
