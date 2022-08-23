@@ -19,6 +19,9 @@ cargo check
 
 # Build for release
 cargo build —release
+
+# Build documentation from your dependencies and open in browser
+cargo doc --open
 ```
 
 ## The Cargo.lock file
