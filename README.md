@@ -39,7 +39,9 @@ Source: [Rust documentation](https://doc.rust-lang.org/book/ch04-01-what-is-owne
 
 ## References and Borrowing
 
-To refer to (borrow) a variable `s` *without taking ownership* we can use its poiner `&s`. For an immutable variable, we cannot change its value by using it's pointer, i.e. the following code throws a compiler error.
+To refer to (borrow) a variable `s` *without taking ownership* we can use its poiner `&s`. Unlike in C++, however, `&s` resolves to `s` (the contents) and not the memory address of `s`! To print the memory address we would need to request it explicitly by formatting the output as `println!("&x: {:p}", &x);` 
+
+For an immutable variable, we cannot change its value by using it's pointer, i.e. the following code throws a compiler error.
 
 ```Rust
 let s = String::from("hello");
